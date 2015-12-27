@@ -26,7 +26,19 @@
 
 
 ## Write a short comment describing this function
-
-cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
-}
+  ## Added code for cacheSolve function 
+  ## check if the passed matrix is NULL or not 
+  ## if its NOT  NULL then call then retruned the Cached value
+  ## Pass the created Matrix in the orignal makeCacheMatrix func to return inverse values
+  
+  cacheSolve <- function(x=matrix(), ...) {
+    m<-x$getmatrix()
+    if(!is.null(m)){
+      message("getting cached data")
+      return(m)
+    }
+    matrix<-x$get()
+    m<-solve(matrix, ...)
+    x$setmatrix(m)
+    m
+  }
