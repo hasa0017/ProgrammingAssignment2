@@ -4,7 +4,9 @@
 ## functions do
 
 ## Write a short comment describing this function
-## 
+## function uses lexical scoping to declare global variables
+## and then assigns local values as when needed
+## using R function Solve to return the INverse matrix
 
 
   makeCacheMatrix <- function(x = matrix()) {
@@ -20,7 +22,7 @@
          setmatrix=setmatrix,
          getmatrix=getmatrix)
   }
-
+ 
 
 
 ## Write a short comment describing this function
